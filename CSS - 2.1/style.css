@@ -27,6 +27,12 @@ img {
     margin-bottom: 32px;
 }
 
+.cropped {
+    height: 150px; 
+    overflow: hidden;
+    object-fit: cover;
+}
+
 .container {
     max-width: 980px;
     margin: auto;
@@ -37,21 +43,33 @@ img {
     color: #b7832f;
 }
 
-.side {
-    color: white;
-    background-color: #312614;
-}
-
 .columns {
     display: flex;
     margin-bottom: 32px;
+    justify-content: space-between;
 }
 
 .col {
     margin: 0;
+    padding: 25px 25px 25px 0;
+}
+
+.side {
+    color: white;
+    background-color: #312614;
     padding: 25px;
 }
 
 .small {
     max-width: 25%;
+}
+
+@media (max-width: 600px) {
+    .columns {
+        flex-direction: column;
+    }
+
+    .small {
+        max-width: 100%;
+    }
 }

@@ -5,6 +5,7 @@ body {
     font-size: 1.125rem;
     font-weight: 300;
     color: #707070;
+    line-height: 1.6;
 }
 
 
@@ -26,10 +27,12 @@ h1 {
 
 h2 {
     font-size: 1.5rem;
+    margin-bottom: 1em;
 }
 
 h4 {
     color: #1792d2;
+    line-height: 1.4;
 }
 
 a {
@@ -44,6 +47,7 @@ a:focus {
 p {
     font-size: 1.125rem;
     font-weight: 300;
+    margin-top: 0;
 }
 
 .subtitle {
@@ -56,6 +60,7 @@ p {
 .comment-section {
     font-size: .875rem;
     color: #707070;
+    margin-top: 1em;
 }
 
 .continue-reading {
@@ -63,6 +68,7 @@ p {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.875rem;
+    letter-spacing: 1px;
 }
 
 .continue-reading:hover, .continue-reading:focus {
@@ -76,19 +82,20 @@ p {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
     margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 .widget p{
     color: #143774;
     font-size: .875rem;
     margin-bottom: 0;
+    margin-top: 1em;
 }
 
 footer {
-    color: #ebebeb;
+    color: rgba(255, 255, 255, .5);
     background-color: #143774;
-    height: 25vh;
-    padding: 50px;
+    padding: 3em 0;
 }
 
 footer strong, footer p {
@@ -107,6 +114,11 @@ header {
     padding: 2em 0;
     text-align: center;
     margin-bottom: 3em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
 }
 
 hr {
@@ -140,6 +152,10 @@ hr {
 
 .primary-article-image, .primary-article .comment-section {
     order: 1;
+}
+
+.primary-article-image {
+    margin-bottom: 1em;
 }
 
 .primary-article-title {
@@ -186,6 +202,22 @@ hr {
 
 .card img {
     order: -1;
+}
+
+.about-me-image {
+    order: -1;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 1em;
+}
+
+.about-me-title {
+    margin: 1em 0;
+}
+
+.about-me-subtitle {
+    color: #1792d2;
+    margin-bottom: .725em;
 }
 
 @media (min-width: 675px) {
@@ -247,6 +279,8 @@ nav a {
     color: #707070;
     font-weight: 700;
     padding: .25em 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 nav a:hover,

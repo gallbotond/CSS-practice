@@ -8,16 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap" rel="stylesheet">
-    <title>CSS 2.3</title>
+    <title>CSS 3.1</title>
 </head>
 <body>
     <header>
-        <h1 class="banner-title">Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
-        <p class="subtitle">join us for this live webinar</p>
-        <p class="top-text">mouthwateringly delicious</p>
+        <h1 class="banner-title container">Learn how to make <strong>the best BBQ ribs</strong> in town</h1>
+        <p class="subtitle container">join us for this live webinar</p>
+        <p class="top-text container">mouthwateringly delicious</p>
     </header>
 
-    <main>
+    <main class="container">
         <h2 class="register-title"><strong>Become a BBQ master!</strong></h2>
         <p class="subtitle">register today</h3>
         <p class="register-details">
@@ -25,9 +25,16 @@
             blast and hoping for the best. It's an art! One way to speed up the process is
             to learn from the best. You can do just that by signing up for this free webinar!
         </p>
-        <input class="name-input" type="text" name="fistName" id="fistName">
-        <input class="email-input" type="text" name="email" id="email">
-        <button class="register-btn">register</button>
+
+        <form action="#" method="post">
+            <label for="name"></label>
+            <input id="name" class="name-input" type="text" name="fistName" placeholder="John Doe">
+            <br>
+            <label for="email"></label>
+            <input id="email" class="email-input" type="email" name="email" placeholder="john@email.com" required>
+            <br>
+            <button class="register-btn" type="submit">register</button>
+        </form>
         <p class="disclaimer">We never share your information without your permission</p>
     </main>
 </body>

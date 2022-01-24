@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
@@ -35,6 +39,12 @@ strong {
     font-weight: 900;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .top-text {
     font-size: 0.625rem;
     font-weight: 900;
@@ -44,23 +54,34 @@ strong {
     order: -1;
     border-top: 2px solid #f18119;
     margin: 0 auto;
+    border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
 }
 
 .subtitle {
-    margin: 0;
     text-transform: uppercase;
 }
 
 .disclaimer {
-    font-size: 0.635rem;
+    font-size: 0.625rem;
     letter-spacing: 1px;
+}
+
+main > *, 
+header > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* LAYOUT --------------------------------- */
 
 header {
     background-color: #404040;
-    background-image: url('img/dark-ribs.jpg');
+    background-image: url('img/ribs.jpg');
+    /* background-image: linear-gradient(45deg, red, blue); */
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
     padding: 0 .25em 2em;
     display: flex;
     flex-direction: column;
@@ -70,8 +91,78 @@ main {
     padding: 2em;
 }
 
+
 @media (min-width: 500px) {
     body {
-        background-color: azure;
+        font-size: 1.125rem;
+        display: flex;
     }
+
+    header {
+        width: 60%;
+        min-height: 100vh;
+    }
+
+    main {
+        width: 40%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2, 
+    h1 + p {
+        font-size: 1.75rem;
+    }
+    
+    /* .container {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    } */
+}
+
+/* FORM -------------------------------- */
+form {
+    max-width: 300px;
+    font-family: inherit;
+    text-align: inherit;
+}
+
+input {
+    margin: .5em;
+    padding: .5em;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #404040;
+    transform: scale(1);
+    transition: transform .25s;
+}
+
+input:focus {
+    transform: scale(1.1);
+}
+
+.register-btn {
+    text-transform: uppercase;
+    background: linear-gradient(to left, #ff713b, #ffa51d);
+    color: white;
+    font-weight: 700;
+    font-size: .625rem;
+    border: none;
+    width: 100%;
+    margin: .5em;
+    padding: 1em;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform .25s;
+
+}
+
+.register-btn:hover,
+.register-btn:focus {
+    color: black;
+    transform: scale(1.1);
+    /* background: linear-gradient(to right, #ff713b, #ffa51d); */
 }

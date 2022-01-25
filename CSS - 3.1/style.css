@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background: gray;
+    color: lightgray;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+/* TYPOGRAPHY -------------------------------- */
+
+.article-title {
+    font-size: 28px;
+    color: #05cbe9;
+    margin-top: 0;
+}
+
+.article-info {
+    font-size: 16px;
+}
+
+.read-more-btn {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* LAYOUT ---------------------------------- */
+
+.card {
+    max-width: 800px;
+    width: 90%; 
+    margin: 0 auto;
+    display: flex;
+    background: #111d4a;
+}
+
+.info-section {
+    padding: 2em;
+    width: 70%;
+}
+
+.article-image {
+    width: 30%;
+    height: 300px
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.read-time {
+    max-width: 50px;
+}
+
+.read-more-btn {
+    background: #05cbe9;
+    color: #111d4a;
+    border: 0;
+    align-self: flex-end;
+    padding: .5em 1em;
+}
+/* img {
+    width: 100%;
+} */
+

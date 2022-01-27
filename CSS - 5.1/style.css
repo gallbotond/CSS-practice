@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.6;
+    background-color: black;
+}
+
+/*  TYPOGRAPHY -------------------------- */
+
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h2,
+.intro {
+    font-size: 1.125rem;
+}
+
+button, 
+nav {
+    font-size: 0.875rem;
+}
+
+span {
+    color: #fde800;
+}
+
+main {
+    background: white;
+    color: #404040;
+}
+
+footer {
+    color: black;
+    background: lightgray;
+}
+
+/* LAYOUT ------------------------------- */
+
+.top-section {
+    background-image: url('./img/hero-bg.jpg');
+    background-position: 60% bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 6em;
+}
+
+.container {
+    padding: 0 2em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 5em;
+}
+
+.navbar {
+    display: none;
+}
+
+.logo {
+    background: #fde800;
+    color: black;
+    margin: 0;
+    width: min-content;
+    height: 6em;
+}
+
+.logo h1 {
+    margin: 0;
+    padding: 40px 10px 0 10px;
+}
+
+.intro {
+    max-width: 60%;
+}
+
+.contact-btn {
+    /* position: relative;
+    display: inline-block; */
+    font-weight: 700;
+    border: none;
+    background: #fde800;
+    padding: 1em 2em;
+    letter-spacing: 1px;
+    transform: scale(1);
+    transition: .25s;
+    transition-property: color, background-color, transform;
+    cursor: pointer;
+}
+
+.contact-btn:hover,
+.contact-btn:focus {
+    color: #fde800;
+    background: #404040;
+    border: 2px solid #fde800;
+    transform: scale(1.1);
+}
+
+main {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.info {
+   text-align: center;
+   max-width: 75%;
+   margin: 0 auto;
+}
+
+.info-title {
+    margin-top: 0;
+}
+
+.info-text {
+    margin-bottom: 3em;
+}
+
+footer {
+    padding-bottom: 2em;
+    padding-top: 2em;
+    margin: 0;
+    text-align: center;
+}
+
+footer .container {
+    display: grid;
+}
+
+.footer-title,
+.footer-text {
+    opacity: .7;
+}
+
+.copyright {
+    opacity: .5;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    order: -1;
+}
+
+.footer-icons > li {
+    list-style-type: none;
+}
+
+.footer-icons i {
+    color: black;
+    opacity: .8;
+    font-size: 2em;
+    margin: .5em;
+    transform: scale(1);
+    transition: .25s;
+}
+
+.footer-icons i:hover,
+.footer-icons i:focus {
+    transform: scale(1.3);
+}
+

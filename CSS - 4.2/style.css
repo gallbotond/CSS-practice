@@ -117,8 +117,7 @@ header {
 }
 
 main {
-    display: flex;
-    flex-direction: column;
+    
 }
 
 hr {
@@ -131,35 +130,42 @@ hr {
     margin: 0 auto;
 }
 
-.container-flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .primary-article {
     /* background-color: pink; */
     border-bottom: 1px solid #707070;
     margin-bottom: 2em;
     padding-bottom: 2em;
-    display: flex;
-    flex-direction: column;
-}
-
-.primary-article-title, .primary-article p, .primary-article .continue-reading {
-    order: 2;
-}
-
-.primary-article-image, .primary-article .comment-section {
-    order: 1;
-}
-
-.primary-article-image {
-    margin-bottom: 1em;
+    display: grid;
+    grid-template: 1fr max-content / auto auto auto auto;
+    grid-template-areas:
+        "image image"
+        "comment comment"
+        "title title"
+        "text text"
+        "read read";
 }
 
 .primary-article-title {
     margin-top: 1em;
+    grid-area: title;
+}
+
+.primary-article-image {
+    margin-bottom: 1em;
+    grid-area: image;
+}
+
+.primary-article .comment-section {
+    grid-area: comment;
+    margin-top: 0;
+}
+
+.primary-article p {
+    grid-area: text;
+}
+
+.continue-reading {
+    grid-area: read;
 }
 
 .secondary-article {
@@ -187,8 +193,6 @@ hr {
 }
 
 .card{
-    display: flex;
-    flex-direction: column;
     border-bottom: 1px solid #707070;
     padding-bottom: 2em;
     margin-bottom: 2em;
@@ -226,35 +230,62 @@ hr {
     }
 
     main {
-        margin-right: 20px;
-        width: 70%;
+        
     }
 
     aside {
-        width: 25%;
+        
     }
-    
-    .container-flex {
-        flex-direction: row;
+
+    .primary-article {
+        display: grid;
+        grid-template: 1fr max-content / auto auto auto auto;
+        grid-template-areas:
+        "image image"
+        "title comment"
+        "text text"
+        "read read";
+    }
+
+    .primary-article .comment-section {
+        justify-self: flex-end;
     }
 
     .secondary-article {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template: auto auto auto / 1fr 2fr;
+        gap: 1em 2em;
+        grid-template-areas: 
+            "img title"
+            "img text"
+            "comment read"
     }
-
-    .image-section {
-        width: 25%;
-    }
-
-    .text-section {
-        width: 70%;
-    }
-
+    
     .secondary-article img {
         width: 100%;
         min-height: 150px;
         object-fit: cover;
+        grid-area: img;
+    }
+
+    .secondary-article .comment-section {
+        grid-area: comment;
+        margin: 0;
+
+    }
+
+    .secondary-article h2 {
+        grid-area: title;
+        margin: 0;
+    }
+
+    .secondary-article p {
+        grid-area: text;
+        margin: 0;
+    }
+
+    .secondary-article .continue-reading {
+        grid-area: read
     }
 
     .left {
@@ -266,8 +297,6 @@ hr {
 nav ul {
     list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 nav li {

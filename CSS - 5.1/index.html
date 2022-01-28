@@ -18,11 +18,13 @@
                 <div class="logo">
                     <h1><strong>Jake</strong>&<strong>Elwood</strong></h1>
                 </div>
-                <nav class="navbar">
-                    <ul>
+                <button class="open-nav">&#9776;</button>
+                <nav class="navbar-open">
+                    <ul class="navbar">
                         <li><a class="current-page" href="#">home</a></li>
                         <li><a href="about-us.html">about us</a></li>
                         <li><a href="contact.html">contact</a></li>
+                        <li><button class="close-nav" aria-label="close navigation">&times;</button></li>
                     </ul>
                 </nav>
             </header>
@@ -42,7 +44,7 @@
     </section>
 
     <main>
-        <div class="container">
+        <div class="container grid">
             <div class="info">
                 <h3 class="info-title">About us</h3>
                 <p class="info-text">
@@ -68,7 +70,7 @@
     </main>
 
     <footer>
-        <div class="container">
+        <div class="container grid">
             <div class="footer-main">
                 <h2 class="footer-title"><strong>Jake</strong>&<strong>Elwood</strong></h2>
                 <p class="footer-text">
@@ -85,5 +87,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>

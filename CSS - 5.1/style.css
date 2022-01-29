@@ -81,7 +81,7 @@ header {
 
 .logo h1 {
     margin: 0;
-    padding: 57px 10px 0 10px;
+    padding: 69px 10px 0 10px;
 }
 
 .logo strong {
@@ -90,6 +90,10 @@ header {
 
 .intro {
     max-width: 60%;
+}
+
+.intro-main {
+    margin-top: 5em;
 }
 
 .contact-btn {
@@ -112,6 +116,10 @@ header {
     background: #404040;
     border: 2px solid #fde800;
     transform: scale(1.1);
+}
+
+.grid {
+    display: grid;
 }
 
 /* NAVIGATION ----------------------- */
@@ -244,6 +252,9 @@ footer .container {
 .about-title {
     text-align: center;
     font-weight: 900;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-subtitle::after,
@@ -269,7 +280,7 @@ footer .container {
 }
 
 .about-img {
-    margin: 4em 2em 4em 0;
+    margin: 0em 2em 2em 0;
 }
 
 .about-img img{
@@ -277,6 +288,52 @@ footer .container {
     box-shadow: 10px 10px 0px black,
         20px 20px 0px #fde800;
 }
+
+.about-title::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 30px; 
+    background: #fde800;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+
+.about-intro::after {
+    content: '';
+    display: block;
+    width: 10%;
+    height: 3px;
+    background: #404040;
+    margin: 2em auto;
+    opacity: .6;
+}
+
+/* FORM -------------------------- */
+
+.contact-form {
+    display: grid;
+    order: 2;
+}
+
+.button-container {
+    margin-top: 1em;
+    margin-right: 98px;
+    margin-left: auto;
+}
+
+label {
+    font-weight: 700;
+}
+
+input,
+textarea {
+    margin-bottom: 1em;
+    resize: none;
+    padding: .5em;
+    font-family: inherit;
+}
+
 
 /* DESKTOP ----------------------- */
 
@@ -347,6 +404,33 @@ footer .container {
 
     .about-subtitle:first-child {
         margin-top: 0;
+    }
+
+    .contact-form {
+        grid-column: 2 / span 2;
+        grid-row: 2 / span 2;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: dense;
+        gap: 1em;
+    }
+
+    .button-container{
+        grid-column: span 2;
+    }
+        
+    .fn-l,
+    .fn-i {
+        grid-column: 1;
+    }
+
+    .ln-l,
+    .ln-l {
+        grid-column: 2;
+    }
+
+    .m-l,
+    .m-ta {
+        grid-column: span 2;
     }
 }
 

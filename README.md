@@ -10,4 +10,4 @@ A collection of mockup website designs that have no functionality and were made 
 [article with flexbox](https://gallbotond.github.io/CSS-practice/CSS%20-%203.1%20-%20Article%20Card%20with%20flexbox/)  
 [article with grid](https://gallbotond.github.io/CSS-practice/CSS%20-%204.1%20-%20Article%20Card%20with%20grid/)  
 [work in progress](https://gallbotond.github.io/CSS-practice/CSS%20-%204.2%20-%20work%20in%20progress/)  
-[commercial site](https://gallbotond.github.io/CSS-practice/CSS%20-%205.1%20-%203%20Page%20Commercial%20site/)  
+[commercial site](https://gallbotond.github.io/CSS-practice/CSS%20-%205.1%20-%203%20Page%20Commercial%20site/)
